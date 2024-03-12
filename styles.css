@@ -1,0 +1,13 @@
+/* Texto limite */
+.text-limit {
+    display: -webkit-box;
+    /* Mostrar como caja flexible para usar la propiedad line-clamp */
+    -webkit-line-clamp: 3;
+    /* Limitar el texto a 3 líneas */
+    -webkit-box-orient: vertical;
+    /* Orientación vertical de la caja flexible */
+    overflow: hidden;
+    /* Ocultar cualquier texto que exceda el contenedor */
+    text-overflow: ellipsis;
+    /* Mostrar puntos suspensivos cuando el texto se corta */
+}

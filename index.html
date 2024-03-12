@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllTrade</title>
+    <!-- Estilos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <!-- Owl Carousel JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Estilos Personalizados -->
+    <style>
+        body {
+            /* Color de Fondo */
+            background: #e3e6e6;
+        }
+        .bi {
+            /* Color de Iconos */
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+        /* Estilos personalizados para las flechas de navegación */
+        .owl-prev,
+        .owl-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 1000;
+            /* Asegura que las flechas estén encima del carrusel */
+        }
+        .owl-prev {
+            left: 10px;
+        }
+        .owl-next {
+            right: 10px;
+        }
+        /* Cambiar el color de fondo de las flechas al pasar el ratón */
+        .owl-prev:hover,
+        .owl-next:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+    <!-- Estilos Personalizados CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Iconos de Bootstrap -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="logo" viewBox="0 0 16 16">
+            <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
+            <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
+        </symbol>
+        <symbol id="cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+    </svg>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand d-lg-none" href="#">AllTrade</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">
+                            <svg class="bi" width="24" height="24"><use xlink:href="#logo"/></svg>
+                            <span class="visually-hidden">Logo</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="products.html">Productos</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">Características</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">Empresa</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">Precios</a>
+                    </li>
+                    <li class="nav-item mx-0 mx-lg-4">
+                        <a class="nav-link" href="#">
+                            <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
+                            <span class="visually-hidden">Carrito de compras</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Container -->
+    <div class="container-fluid" style="max-width: 1400px;">
+        <!-- Carrusel -->
+        <div class="row mb-4 d-none d-md-block">
+            <div class="col">
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- imágenes del Carrusel -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjetas Exclusivas -->
+        <h4>Camisas para Caballeros</h4>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4" id="gallery-male"></div>
+
+        <!-- Carrusel de Productos -->
+        <h4>Más resultados</h4>
+        <div class="row mb-4">
+            <div class="col">
+                <div class="owl-carousel owl-theme" id="more-products-carousel"></div>
+            </div>
+        </div>
+
+        <!-- Carrusel de Productos -->
+        <h4>Ofertas del día</h4>
+        <div class="row mb-4">
+            <div class="col">
+                <div class="owl-carousel owl-theme" id="daily-deals-carousel"></div>
+            </div>
+        </div>
+
+        <!-- Tarjetas Exclusivas -->
+        <h4>Camisas para Mujeres</h4>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4" id="gallery-female"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Logo y Copyright -->
+                <div class="col-12 col-md-3 text-center text-md-start">
+                    <svg class="bi mb-1" width="24" height="24"><use xlink:href="#logo"/></svg>
+                    <small class="d-block mb-3 text-secondary">© 2023–2024 AllTrade</small>
+                </div>
+                <!-- Secciones del Sitio -->
+                <div class="col-6 col-md-2 text-center text-md-start">
+                    <h5>Atributos</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Curiosidades</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Rasgo al azar</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Rasgo del grupo</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Diferente</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Última vez</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 text-center text-md-start">
+                    <h5>Recursos</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Título</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Recursos</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Otro recurso</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Recurso final</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 text-center text-md-start">
+                    <h5>Industrias</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Negocio</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Educación</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Juego de azar</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3 text-center text-md-start">
+                    <h5>Acerca de</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Equipo</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Ubicaciones</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Privacidad</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#">Términos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Script Personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
