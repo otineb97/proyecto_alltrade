@@ -39,28 +39,79 @@ const dailyDealsProducts = [
   { image: "https://via.placeholder.com/300", name: "Oferta del día 13" },
 ];
 
+// Función para crear y agregar un producto al DOM
+function createProductCard(product) {
+  const card = document.createElement('div');
+  card.classList.add('col');
+
+  const cardInner = document.createElement('div');
+  cardInner.classList.add('card', 'h-100');
+  card.appendChild(cardInner);
+
+  const imageLink = document.createElement('a');
+  imageLink.classList.add('text-decoration-none');
+  imageLink.href = '#';
+  cardInner.appendChild(imageLink);
+
+  const image = document.createElement('img');
+  image.classList.add('card-img-top');
+  image.src = product.image;
+  image.alt = product.name;
+  imageLink.appendChild(image);
+
+  const cardBody = document.createElement('div');
+  cardBody.classList.add('card-body');
+  cardInner.appendChild(cardBody);
+
+  const titleLink = document.createElement('a');
+  titleLink.classList.add('text-decoration-none', 'text-dark', 'link-primary');
+  titleLink.href = '#';
+  titleLink.textContent = product.name;
+  const title = document.createElement('h5');
+  title.classList.add('card-title', 'text-limit');
+  title.appendChild(titleLink);
+  cardBody.appendChild(title);
+
+  const description = document.createElement('p');
+  description.classList.add('card-text', 'text-limit');
+  description.textContent = product.description;
+  cardBody.appendChild(description);
+
+  const ratingWrapper = document.createElement('div');
+  ratingWrapper.classList.add('d-flex', 'align-items-center', 'mb-2');
+  cardBody.appendChild(ratingWrapper);
+
+  const rating = document.createElement('div');
+  rating.classList.add('text-warning', 'me-2');
+  rating.textContent = product.ratings;
+  ratingWrapper.appendChild(rating);
+
+  const amount = document.createElement('div');
+  amount.classList.add('text-secondary');
+  amount.textContent = `(${product.amount})`;
+  ratingWrapper.appendChild(amount);
+
+  const price = document.createElement('p');
+  price.classList.add('card-text', 'fw-semibold');
+  price.textContent = product.price;
+  cardBody.appendChild(price);
+
+  const shipment = document.createElement('p');
+  shipment.classList.add('card-text', 'fw-bold', 'text-success');
+  shipment.textContent = product.shipment;
+  cardBody.appendChild(shipment);
+
+  return card;
+}
+
 // Función para cargar los productos en la galería
 function loadProducts(products, galleryId) {
   const gallery = document.getElementById(galleryId);
-  gallery.innerHTML = "";
+  gallery.innerHTML = ""; // Limpiamos el contenido existente
+
   products.forEach(product => {
-    gallery.innerHTML += `
-        <div class="col">
-          <div class="card h-100">
-            <a href="#" class="text-decoration-none"><img src="${product.image}" class="card-img-top" alt="${product.name}"></a>
-            <div class="card-body">
-              <h5 class="card-title text-limit"><a href="#" class="text-decoration-none text-dark link-primary">${product.name}</a></h5>
-              <p class="card-text text-limit">${product.description}</p>
-              <div class="d-flex align-items-center mb-2">
-                <div class="text-warning me-2">${product.ratings}</div>
-                <div><span class="text-secondary">(${product.amount})</span></div>
-              </div>
-              <p class="card-text fw-semibold">${product.price}</p>
-              <p class="card-text fw-bold text-success">${product.shipment}</p>
-            </div>
-          </div>
-        </div>
-      `;
+    const productCard = createProductCard(product);
+    gallery.appendChild(productCard);
   });
 }
 
@@ -85,7 +136,7 @@ function loadProductsCarousel(products, carouselId) {
   products.forEach(product => {
     productCarousel.append(`
       <div class="item">
-        <img src="${product.image}" class="rounded" alt="${product.name}">
+        <a href="#" class="text-decoration-none"><img src="${product.image}" class="rounded" alt="${product.name}"></a>
       </div>
     `);
   });
@@ -93,7 +144,7 @@ function loadProductsCarousel(products, carouselId) {
   // Inicializar el carrusel de Owl Carousel
   productCarousel.owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 24,
     nav: true,
     dots: false,
     responsive: {
