@@ -70,97 +70,103 @@
         </symbol>
     </svg>
     
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand d-lg-none" href="#">AllTrade</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link" href="#">
-                            <svg class="bi" width="24" height="24"><use xlink:href="#logo"/></svg>
-                            <span class="visually-hidden">Logo</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link" href="products.html">Productos</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link" href="#">Características</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link" href="#">Empresa</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link" href="#">Precios</a>
-                    </li>
-                    <li class="nav-item mx-0 mx-lg-4">
-                        <a class="nav-link" href="#">
-                            <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
-                            <span class="visually-hidden">Carrito de compras</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Container -->
-    <div class="container-fluid" style="max-width: 1400px;">
-        <!-- Carrusel -->
-        <div class="row mb-4 d-none d-md-block">
-            <div class="col">
-                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <!-- imágenes del Carrusel -->
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+            <div class="container-fluid">
+                <a class="navbar-brand d-lg-none" href="#">AllTrade</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link" href="#" aria-label="Ir a Inicio">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#logo"/></svg>
+                                <span class="visually-hidden">Logo</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link" href="#" aria-label="Ir a Productos">Productos</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link" href="#" aria-label="Ir a Características">Características</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link" href="#" aria-label="Ir a Empresa">Empresa</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link" href="#" aria-label="Ir a Precios">Precios</a>
+                        </li>
+                        <li class="nav-item mx-0 mx-lg-4">
+                            <a class="nav-link" href="#" aria-label="Ir al carrito de compras">
+                                <svg class="bi" width="24" height="24"><use xlink:href="#cart"/></svg>
+                                <span class="visually-hidden">Carrito de compras</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
+    </header>
 
-        <!-- Tarjetas Exclusivas -->
-        <h4>Camisas para Caballeros</h4>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4" id="gallery-male"></div>
-
-        <!-- Carrusel de Productos -->
-        <h4>Más resultados</h4>
-        <div class="row mb-4">
-            <div class="col">
-                <div class="owl-carousel owl-theme" id="more-products-carousel"></div>
+    <!-- Main Content -->
+    <main>
+        <!-- Container -->
+        <div class="container-fluid" style="max-width: 1400px;">
+            <!-- Carrusel -->
+            <div class="row mb-4 d-none d-md-block">
+                <div class="col">
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <!-- imágenes del Carrusel -->
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Carrusel de Productos -->
-        <h4>Ofertas del día</h4>
-        <div class="row mb-4">
-            <div class="col">
-                <div class="owl-carousel owl-theme" id="daily-deals-carousel"></div>
+            <!-- Tarjetas Exclusivas -->
+            <h4>Camisas para Caballeros</h4>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4" id="gallery-male"></div>
+
+            <!-- Carrusel de Productos -->
+            <h4>Más resultados</h4>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="owl-carousel owl-theme rounded" id="more-products-carousel" style="background-color: #cccccc;"></div>
+                </div>
             </div>
-        </div>
 
-        <!-- Tarjetas Exclusivas -->
-        <h4>Camisas para Mujeres</h4>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4" id="gallery-female"></div>
-    </div>
+            <!-- Carrusel de Productos -->
+            <h4>Ofertas del día</h4>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="owl-carousel owl-theme rounded" id="daily-deals-carousel" style="background-color: #cccccc;"></div>
+                </div>
+            </div>
+
+            <!-- Tarjetas Exclusivas -->
+            <h4>Camisas para Mujeres</h4>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mb-4" id="gallery-female"></div>
+        </div>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-dark text-light py-5">
@@ -175,37 +181,37 @@
                 <div class="col-6 col-md-2 text-center text-md-start">
                     <h5>Atributos</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Curiosidades</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Rasgo al azar</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Rasgo del grupo</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Diferente</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Última vez</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Curiosidades">Curiosidades</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Rasgo al azar">Rasgo al azar</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Rasgo del grupo">Rasgo del grupo</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Diferente">Diferente</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Última vez">Última vez</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-2 text-center text-md-start">
                     <h5>Recursos</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Título</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Recursos</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Otro recurso</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Recurso final</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Título">Título</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Recursos">Recursos</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Otro recurso">Otro recurso</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Recurso final">Recurso final</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-2 text-center text-md-start">
                     <h5>Industrias</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Negocio</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Educación</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Juego de azar</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Negocio">Negocio</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Educación">Educación</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Juego de azar">Juego de azar</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3 text-center text-md-start">
                     <h5>Acerca de</h5>
                     <ul class="list-unstyled text-small">
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Equipo</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Ubicaciones</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Privacidad</a></li>
-                        <li><a class="text-decoration-none text-secondary link-light" href="#">Términos</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Equipo">Equipo</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Ubicaciones">Ubicaciones</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Privacidad">Privacidad</a></li>
+                        <li><a class="text-decoration-none text-secondary link-light" href="#" aria-label="Ir a Términos">Términos</a></li>
                     </ul>
                 </div>
             </div>
