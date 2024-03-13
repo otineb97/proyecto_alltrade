@@ -11,3 +11,11 @@
     text-overflow: ellipsis;
     /* Mostrar puntos suspensivos cuando el texto se corta */
 }
+
+/* Estilos personalizados para los controles de carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 3%;
+    opacity: 0.5;
+    /* Opacidad inicial */
+}
